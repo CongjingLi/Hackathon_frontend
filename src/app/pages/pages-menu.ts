@@ -31,60 +31,76 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   link: '/pages/iot-dashboard',
   // },
  
-  
-  {
-    title: 'My Profile',
-    group: true,
-  },
- 
-  {
-    title: '流程管理',
-    icon: 'map-outline',
-    children: [
-      {
-        title: '创建流程',
-        link: '/pages/forms/inputs',
-      },
-      {
-        title: '流程管理',
-        link: '/pages/tables/tree-grid',
-      },
-    ]
-  },
-  {
-    title: '文档管理',
-    icon: 'map-outline',
-    children: [
-      {
-        title: '新建文档',
-        link: '/pages/iot-dashboard',
-      },
-      {
-        title: 'AllDocument',
-        link: '/pages/ui-features/grid',
-      },
-    ]
-  },
-  {
-    title: '用户管理',
-    icon: 'browser-outline',
-    children: [
-      {
-        title: 'My Funds',
-        link: '/pages/forms/myfunds',
-      },
-      {
-        title: 'Fund Trading Records',
-        link: '/pages/iot-dashboard',
-      },
-    ]
-  },
-  {
-    title: '实时聊天',
-    icon: 'pie-chart-outline',
-    link: '/pages/dashboard',
-    home: true,
-  },
+    {
+      title: 'My Profile',
+      group: true,
+    },
+    {
+      title: 'Workflow Management',
+      icon: 'map-outline',
+      children: [
+        {
+          title: 'Establish workflow',
+          link: '/pages/forms/inputs',
+        },
+        {
+          title: 'Workflow Management',
+          link: '/pages/tables/tree-grid',
+        },
+      ]
+    },
+    {
+      title: 'Document Management',
+      icon: 'map-outline',
+      children: [
+        {
+          title: 'Create Document',
+          link: '/pages/iot-dashboard',
+        },
+        {
+          title: 'AllDocument',
+          link: '/pages/ui-features/grid',
+        },
+      ]
+    },
+    {
+      title: 'User Management',
+      icon: 'browser-outline',
+      children: [
+        {
+          title: 'My Funds',
+          link: '/pages/forms/myfunds',
+        },
+        {
+          title: 'Fund Trading Records',
+          link: '/pages/iot-dashboard',
+        },
+      ]
+    },
+    {
+      title: 'Seeking Collaboration',
+      icon: 'grid-outline',
+      children: [
+        {
+          title: 'Psychological counseling',
+          link: '/pages/ui-features/psychological',
+        },
+        {
+          title: 'Addiction treatment',
+          link: '/pages/ui-features/addiction',
+        },
+        {
+          title: 'Housing search',
+          link: '/pages/ui-features/house',
+        },
+      ]
+    },
+    {
+      title: 'Chatting',
+      icon: 'pie-chart-outline',
+      link: '/pages/dashboard',
+      home: true,
+    },
  
 
   // {

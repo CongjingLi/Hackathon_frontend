@@ -31,7 +31,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>1514L</td>
+            <td>1512</td>
             <td>Springboard</td>
             <td>Lee</td>
             <td>create document</td>
@@ -42,11 +42,41 @@
 
             <td>
               <!-- <button (click)="deleteStock(stock.ticker)" class="btn btn-danger">Delete</button> -->
-                <button (click)="stockDetails('1')" class="btn btn-info" style="margin-left: 10px">Sell Stock</button>
+                <button (click)="stockDetails('1')" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1513</td>
+            <td>Springboard</td>
+            <td>May</td>
+            <td>create document</td>
+            <td>2022-11-22</td>
+            <td>2022-12-13</td>
+            <td>Lee</td>
+            <td>COMPLETED</td>
+
+            <td>
+              <!-- <button (click)="deleteStock(stock.ticker)" class="btn btn-danger">Delete</button> -->
+                <button (click)="stockDetails('1')" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1514</td>
+            <td>Springboard</td>
+            <td>May</td>
+            <td>care</td>
+            <td>2022-15-20</td>
+            <td>2022-15-13</td>
+            <td>Lee</td>
+            <td>In Progress</td>
+
+            <td>
+              <!-- <button (click)="deleteStock(stock.ticker)" class="btn btn-danger">Delete</button> -->
+                <button (click)="stockDetails('1')" class="btn btn-info" style="margin-left: 10px">Details</button>
             </td>
           </tr>
           
-              <tr *ngFor="let trade of events | async">
+          <tr *ngFor="let trade of events | async">
             <td>{{trade.documentId}}</td>
             <td>{{trade.organization}}</td>
             <td>{{trade.assignee}}</td>
