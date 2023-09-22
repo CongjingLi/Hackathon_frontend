@@ -1,98 +1,111 @@
-  <div class="col-md-12 ">
-    <nb-card class="headings-card">
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
       <nb-card-header>
-        <h1>&nbsp;&nbsp;{{fund.code}}</h1>
-        <form class="form-inline" (ngSubmit)="onSubmit()">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <input type="text" nbInput fullWidth id="buyAmount" placeholder="$" name="buyAmount" required [(ngModel)]="buyAmount">
-            </div>  
-          </div>
-          <div class="col-sm-2">
-            
-            <div class="form-group">
-              <button nbButton type="submit"  status="success" >Buy</button>
-            </div>  
-          </div>
-          
-
-          <div *ngIf="buySuccessMessage" class="success-message">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buy successfully!
-          </div>
-      </form>
+        Document
       </nb-card-header>
       <nb-card-body>
+        <!-- <label class="search-label" for="search">Search:</label> 
+        <input nbInput  id="search" class="search-input" (keyup.enter)="stockSearch($event.target.value)" required [(ngModel)]="nameTicker"> -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th> id
+                </th>
+                <th> name
+                </th>
+                <th> authenticationId
+                </th>
+                <th> createTime
 
-
-        
-        <!-- <div class="header">
-          <div>
-            <h4>Ticker</h4>
-          </div>
-
-          <div class="detail">
-            {{stock.ticker}}
-          </div>
-        </div> -->
-
-        <div class="header">
-          <div>
-            <h4>Unit Net</h4>
-          </div>
-
-          <div class="detail">
-            {{fund.unitNet}}
-          </div>
+                </th>
+                <th> currentEventPosition
+                </th>
+                <th> createName
+                </th>
+                
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1514</td>
+                <td>Stephen</td>
+                <td>US ID number</td>
+                <td>22:10 21-09-2023</td>
+                <td>2</td>
+                <td>Lijinming</td>
+                <!-- <td>
+                  
+                    <button (click)="stockDetails(stock.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                    <button (click)="buyStock(stock.ticker)" class="btn btn-success" >Buy</button>
+                    
+                </td> -->
+                
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="header">
-          <div>
-            <h4>Accumulated Net</h4>
-          </div>
-
-          <div class="detail">
-            {{fund.accNet}}
-          </div>
-        </div>
-        <div class="header">
-          <div>
-            <h4>Daily Growth Rate</h4>
-          </div>
-
-          <div class="detail">
-            {{fund.rate}}
-          </div>
-        </div>
-        <div class="header">
-          <div>
-            <h4>Subscription</h4>
-          </div>
-
-          <div class="detail">
-            {{fund.subscription}}
-          </div>
-        </div>
-        <div class="header">
-          <div>
-            <h4>Redemption</h4>
-          </div>
-
-          <div class="detail">
-            {{fund.redemption}}
-          </div>
-        </div>
-       
       </nb-card-body>
-      <nb-card-footer>
-        <div class="header">
-          <div>
-            <h4>History Trend</h4>
-          </div>
+    </nb-card>
+
+    <nb-card>
+      <nb-card-header>
+        eventList
+      </nb-card-header>
+      <nb-card-body>
+        <!-- <label class="search-label" for="search">Search:</label> 
+        <input nbInput  id="search" class="search-input" (keyup.enter)="stockSearch($event.target.value)" required [(ngModel)]="nameTicker"> -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th> id
+                </th>
+                <th> documentId
+                </th>
+                <th> organization
+                </th>
+                <th> currentSubEventPosition
+
+                </th>
+                <th> createName
+                </th>
+                <th> assignee
+                </th>
+                <th> createTime
+                </th>
+                
+                <th> completeTime
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1514</td>
+                <td>hospital</td>
+                <td> 2</td>
+                <td>Lee</td>
+                <td>create document</td>
+                <td>22:10 21-09-2023</td>
+                <td>22:10 21-09-2023</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>hospital</td>
+                <td>Springboard</td>
+                <td> 0</td>
+                <td>Lee</td>
+                <td>hospital care</td>
+                <td>22:10 21-09-2023</td>
+                <td>22:10 21-09-2023</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div>
-          <div>
-            <chart type="line" [data]="data" [options]="options"  class="chart-container"></chart>
-         </div>
-        </div>
-      </nb-card-footer>
+      </nb-card-body>
     </nb-card>
   </div>
+</div>

@@ -1,40 +1,65 @@
 
 <nb-card>
   <nb-card-header>
-    Stock Trading Records
+    Events
   </nb-card-header>
   
   <nb-card-body>
-    <canvas id="tradeAmountBarChart" style="height: 60%; width: 60%;">123</canvas>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th> Name
+            <th> documentId
             </th>
-            <th> Type
+            <th> organization
             </th>
-            <th> Price
+            <th> assignee
             </th>
-            <th> Amount
+            <th> description
             </th>
-            <th> Time
+            <th> createTime
             </th>
-            <!-- <th> Actions
-            </th> -->
+            <th> completeTime
+            </th>
+            <th> notificationReceiver
+            </th>
+            <th> eventStatus
+            </th>
+            <th> Actions
+            </th>
           </tr>
         </thead>
         <tbody>
-              <tr *ngFor="let trade of trades | async">
-            <td>{{trade.ticker}}</td>
-            <td>{{trade.type}}</td>
-            <td>{{trade.price}}</td>
-            <td>{{trade.amount}}</td>
-            <td>{{trade.time | date:'yyyy-MM-dd HH:mm'}}</td>
-            <!-- <td>
-              <button (click)="deleteStock(stock.ticker)" class="btn btn-danger">Delete</button>
-                <button (click)="stockDetails(stock.ticker)" class="btn btn-info" style="margin-left: 10px">Sell Stock</button>
-            </td> -->
+          <tr>
+            <td>1514L</td>
+            <td>Springboard</td>
+            <td>Lee</td>
+            <td>create document</td>
+            <td>2022-15-20</td>
+            <td>2022-15-13</td>
+            <td>Lee</td>
+            <td>COMPLETED</td>
+
+            <td>
+              <!-- <button (click)="deleteStock(stock.ticker)" class="btn btn-danger">Delete</button> -->
+                <button (click)="stockDetails('1')" class="btn btn-info" style="margin-left: 10px">Sell Stock</button>
+            </td>
+          </tr>
+          
+              <tr *ngFor="let trade of events | async">
+            <td>{{trade.documentId}}</td>
+            <td>{{trade.organization}}</td>
+            <td>{{trade.assignee}}</td>
+            <td>{{trade.description}}</td>
+            <td>{{trade.createTime }}</td>
+            <td>{{trade.completeTime }}</td>
+            <td>{{trade.notificationReceiver }}</td>
+            <td>{{trade.eventStatus }}</td>
+
+            <td>
+              <!-- <button (click)="deleteStock(stock.ticker)" class="btn btn-danger">Delete</button> -->
+                <!-- <button (click)="stockDetails(trade.id)" class="btn btn-info" style="margin-left: 10px">Sell Stock</button> -->
+            </td>
           </tr>
         </tbody>
       </table>

@@ -11,47 +11,54 @@
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th> Name
+                <th> id
                 </th>
-                <th> Ticker
+                <th> name
                 </th>
-                <th> Current Price
+                <th> authenticationId
                 </th>
-                <th> Open Price
+                <th> createTime
 
                 </th>
-                <th> Time
+                <th> currentEventPosition
                 </th>
+                <th> createName
+                </th>
+                
                 <th> Actions
                 </th>
               </tr>
             </thead>
             <tbody>
-                  <tr *ngFor="let stock of stocks | async">
-                <td>{{stock.name}}</td>
-                <td>{{stock.ticker}}</td>
-                <td>{{stock.currentPrice}}</td>
-                <td>{{stock.openPrice}}</td>
-                <td>{{stock.time | date:'yyyy-MM-dd HH:mm'}}</td>
+              <tr >
+                <td>1514</td>
+                <td>Stephen</td>
+                <td>US ID number</td>
+                <td>22:10 21-09-2023</td>
+                <td>2</td>
+                <td>Lijinming</td>
                 <td>
                   
-                    <button (click)="stockDetails(stock.ticker)" class="btn btn-info" style="margin-left: 10px">Details & Buy</button>
+                    <button (click)="stockDetails('1')" class="btn btn-info" style="margin-left: 10px">Details</button>
                     <!-- <button (click)="buyStock(stock.ticker)" class="btn btn-success" >Buy</button> -->
                     
                 </td>
+                
               </tr>
-              <tr *ngFor="let stock of stocks1 | async">
+              <tr *ngFor="let stock of stocks | async">
+                <td>{{stock.id}}</td>
                 <td>{{stock.name}}</td>
-                <td>{{stock.ticker}}</td>
-                <td>{{stock.currentPrice}}</td>
-                <td>{{stock.openPrice}}</td>
-                <td>{{stock.time | date:'yyyy-MM-dd HH:mm'}}</td>
+                <td>{{stock.authenticationId}}</td>
+                <td>{{stock.createTime}}</td>
+                <td>{{stock.currentEventPosition}}</td>
+                <td>{{stock.createUserName}}</td>
                 <td>
                   
-                    <button (click)="stockDetails(stock.ticker)" class="btn btn-info" style="margin-left: 10px">Details & Buy</button>
+                    <button (click)="stockDetails(stock.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
                     <!-- <button (click)="buyStock(stock.ticker)" class="btn btn-success" >Buy</button> -->
                     
                 </td>
+                
               </tr>
             </tbody>
           </table>

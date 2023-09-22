@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class StockholdService {
 
-  private baseUrl = 'https://portfolio-management-api-project-icg-shanghai-b19-payments.apps.oscluster1.fnkn.p1.openshiftapps.com/stockhold';
+  private baseUrl = 'http://localhost:8080/api/event';
 
   constructor(private http: HttpClient) { }
 
@@ -28,8 +28,8 @@ export class StockholdService {
   //   return this.http.delete(`${this.baseUrl}/stock/${name}`, { responseType: 'text' });
   // }
 
-  getStockholdList(accountId:number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/getallstockhold/${accountId}`);
+  getStockholdList(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/queryEvents`);
   }
 
   getStocktrades(accountId:number,startTime:string,endTime:string): Observable<any> {

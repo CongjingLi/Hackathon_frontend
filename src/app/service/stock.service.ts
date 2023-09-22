@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class StockService {
 
-  private baseUrl = 'https://portfolio-management-api-project-icg-shanghai-b19-payments.apps.oscluster1.fnkn.p1.openshiftapps.com';
+  private baseUrl = 'http://localhost:8080/api/document';
 
   constructor(private http: HttpClient) { }
 
@@ -31,6 +31,10 @@ export class StockService {
     return this.http.get(`${this.baseUrl}/stock/getallstocks`);
   }
 
+  getAllDocument(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/getAllDocument`);
+  }
+
   getstockhis(ticker: string,startTime:string,endTime:string): Observable<any> {
     const params = new HttpParams()
     .set('ticker', ticker)
@@ -44,5 +48,11 @@ export class StockService {
     .set('name', name)
     .set('ticker', ticker);
     return this.http.get(`${this.baseUrl}/stock/searchstock`,{params});
+  }
+
+  searchDocument(id:string): Observable<any> {
+    const params = new HttpParams()
+    .set('id', id);
+    return this.http.get(`${this.baseUrl}/createDocument`,{params});
   }
 }

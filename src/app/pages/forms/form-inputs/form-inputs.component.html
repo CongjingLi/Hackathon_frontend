@@ -1,22 +1,33 @@
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-12">
     <nb-card>
       <nb-card-header>创建流程</nb-card-header>
       <nb-card-body>
-        <input type="text" nbInput fullWidth placeholder="Project">
-        <div class="full-name-inputs">
+        <!-- <input type="text" nbInput fullWidth placeholder="documentId"> -->
+        <!-- <div class="full-name-inputs">
           <input type="text" nbInput fullWidth placeholder="Nick">
           <input type="text" nbInput fullWidth placeholder="Last Name">
-        </div>
-        <input type="password" nbInput fullWidth placeholder="Password">
-        <input type="text" nbInput fullWidth shape="rectangle" placeholder="Rectangle border">
-        <input type="text" nbInput fullWidth shape="semi-round" placeholder="Semi-round border">
-        <input type="text" nbInput fullWidth shape="round" placeholder="Rounded border">
-        <input type="text" nbInput fullWidth placeholder="Disabled input" disabled/>
-        <textarea rows="5" nbInput fullWidth shape="round"  placeholder="Text Area"></textarea>
-        <input type="text" nbInput fullWidth fieldSize="small"  placeholder="Small Input">
-        <input type="text" nbInput fullWidth fieldSize="medium"  placeholder="Medium Input">
-        <input type="text" nbInput fullWidth fieldSize="large"  placeholder="Large Input">
+        </div> -->
+        <label class="label">organization:</label>
+        <input type="password" nbInput fullWidth placeholder="organization">
+        <label class="label">assignee:</label>
+        <input type="text" nbInput fullWidth shape="rectangle" placeholder="assignee">
+        <label class="label">description:</label>
+        <input type="text" nbInput fullWidth shape="semi-round" placeholder="description">
+        <!-- <label class="label">createUserName:</label>
+        <input type="text" nbInput fullWidth shape="round" placeholder="createUserName"> -->
+        <!-- <button nbButton  status="success" >添加子Event</button>
+        <button (click)="addInput()">Add</button>
+        <div *ngFor="let input of inputs; let i = index">
+          <label class="label">description:</label>
+          <input type="text" nbInput fullWidth shape="semi-round" placeholder="description" [(ngModel)]="inputs[i].description" />
+          <label class="label">createUserName:</label>
+          <input type="text" nbInput fullWidth shape="round" placeholder="createUserName" [(ngModel)]="inputs[i].createUserName" />
+          <button nbButton  status="" (click)="removeInput(i)">Remove</button>
+        </div> -->
+        <button nbButton  status="success"  >Submit</button>
+                
+       
       </nb-card-body>
     </nb-card>
   </div>

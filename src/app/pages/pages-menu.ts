@@ -20,16 +20,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //     },
   //   ]
   // },
-  {
-    title: 'Stocks',
-    icon: 'layout-outline',
-    link: '/pages/ui-features/grid',
-  },
-  {
-    title: 'Funds',
-    icon: 'grid-outline',
-    link: '/pages/iot-dashboard',
-  },
+  // {
+  //   title: 'Stocks',
+  //   icon: 'layout-outline',
+  //   link: '/pages/ui-features/grid',
+  // },
+  // {
+  //   title: 'Funds',
+  //   icon: 'grid-outline',
+  //   link: '/pages/iot-dashboard',
+  // },
  
   
   {
@@ -46,8 +46,22 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/forms/inputs',
       },
       {
-        title: 'Stock Trading Records',
+        title: '流程管理',
         link: '/pages/tables/tree-grid',
+      },
+    ]
+  },
+  {
+    title: '文档管理',
+    icon: 'map-outline',
+    children: [
+      {
+        title: '新建文档',
+        link: '/pages/iot-dashboard',
+      },
+      {
+        title: 'AllDocument',
+        link: '/pages/ui-features/grid',
       },
     ]
   },
@@ -61,7 +75,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Fund Trading Records',
-        link: '/pages/forms/myfundstrade',
+        link: '/pages/iot-dashboard',
       },
     ]
   },
