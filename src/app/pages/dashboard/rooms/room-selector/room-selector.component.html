@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        Funds
+      </nb-card-header>
+      <nb-card-body>
+        <label class="search-label" for="search">Search:</label> 
+        <input nbInput  id="search" class="search-input" (keyup.enter)="fundSearch($event.target.value)" required [(ngModel)]="fundcode">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th> code
+                </th>
+                <th> unitNet
+                </th>
+                <th> accNet
+                </th>
+                <th> time
+                </th>
+                <th> Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let fund of funds | async">
+                <td>{{fund.code}}</td>
+                <td>{{fund.unitNet}}</td>
+                <td>{{fund.accNet}}</td>
+                <td>{{fund.time | date:'yyyy-MM-dd HH:mm'}}</td>
+                <td>
+                  <!-- <button (click)="deleteFund(fund.name)" class="btn btn-danger">Delete</button> -->
+                    <button (click)="fundDetails(fund.code)" class="btn btn-info" style="margin-left: 10px">Details & Buy</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

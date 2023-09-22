@@ -1,0 +1,60 @@
+<nb-card >
+  <nb-tabset fullWidth>
+    <nb-tab tabTitle="Assets" >
+      
+      <div class="chart-container">
+        <div class="summary-container">
+          <div >
+            <div>Total Assets</div>
+            <div class="h5">{{assets.totalAssets| number:'1.2-2'}}</div>
+          </div>
+          <div >
+            <div>Stock Assets</div>
+            <div class="h5">{{assets.stockAssets| number:'1.2-2'}}</div>
+          </div>
+          <div >
+            <div>Fund Assets</div>
+            <div class="h5">{{assets.fundAssets| number:'1.2-2'}}</div>
+          </div>
+          <div >
+            <div>Balance</div>
+            <div class="h5">{{assets.balance| number:'1.2-2'}}</div>
+          </div>
+        </div>
+      </div>
+    </nb-tab>
+  </nb-tabset>
+  <canvas id="assetsPieChart" style="height: 60%; width: 60%;">123</canvas>
+  <nb-card-footer>
+    <div class="row">
+      <form class="form-inline" (ngSubmit)="transferOut()">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <input type="text" nbInput fullWidth id="amount" placeholder="$" name="amount" required [(ngModel)]="transOutNum">
+          </div>  
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <button nbButton type="submit" >Transfer Out</button>
+          </div>  
+        </div>
+      </form>
+
+      <form class="form-inline" (ngSubmit)="onSubmit()">
+        <div class="col-sm-4">
+          <div class="form-group1">
+            <input type="text" nbInput fullWidth id="amount" placeholder="$" name="amount" [(ngModel)]="amount">
+          </div>  
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group1">
+            <button nbButton type="submit" status="success" >Transfer In</button>
+          </div>  
+        </div>
+      </form>
+    </div>
+  </nb-card-footer>
+</nb-card>
+
+
+

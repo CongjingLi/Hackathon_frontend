@@ -1,0 +1,43 @@
+
+<nb-card>
+  <nb-card-header>
+    Stock Trading Records
+  </nb-card-header>
+  
+  <nb-card-body>
+    <canvas id="tradeAmountBarChart" style="height: 60%; width: 60%;">123</canvas>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th> Name
+            </th>
+            <th> Type
+            </th>
+            <th> Price
+            </th>
+            <th> Amount
+            </th>
+            <th> Time
+            </th>
+            <!-- <th> Actions
+            </th> -->
+          </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let trade of trades | async">
+            <td>{{trade.ticker}}</td>
+            <td>{{trade.type}}</td>
+            <td>{{trade.price}}</td>
+            <td>{{trade.amount}}</td>
+            <td>{{trade.time | date:'yyyy-MM-dd HH:mm'}}</td>
+            <!-- <td>
+              <button (click)="deleteStock(stock.ticker)" class="btn btn-danger">Delete</button>
+                <button (click)="stockDetails(stock.ticker)" class="btn btn-info" style="margin-left: 10px">Sell Stock</button>
+            </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </nb-card-body>
+</nb-card>
