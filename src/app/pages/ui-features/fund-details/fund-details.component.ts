@@ -16,7 +16,6 @@ import { Fundhis } from '../../../domain/fundhis';
 })
 export class FundDetailsComponent  implements OnInit {
 
-  // ticker!: string;
   code!: string;
   // stock!: Stock;
   fund!: Fund;
