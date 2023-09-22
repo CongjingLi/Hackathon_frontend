@@ -36,18 +36,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'My Profile',
     group: true,
   },
+ 
   {
-    title: 'Account',
-    icon: 'pie-chart-outline',
-    link: '/pages/dashboard',
-    home: true,
-  },
-  {
-    title: 'My Stocks',
+    title: '流程管理',
     icon: 'map-outline',
     children: [
       {
-        title: 'My Stocks',
+        title: '创建流程',
         link: '/pages/forms/inputs',
       },
       {
@@ -57,7 +52,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ]
   },
   {
-    title: 'My Funds',
+    title: '用户管理',
     icon: 'browser-outline',
     children: [
       {
@@ -69,6 +64,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/forms/myfundstrade',
       },
     ]
+  },
+  {
+    title: '实时聊天',
+    icon: 'pie-chart-outline',
+    link: '/pages/dashboard',
+    home: true,
   },
  
 
